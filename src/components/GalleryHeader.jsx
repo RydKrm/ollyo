@@ -23,12 +23,15 @@ const GalleryHeader = ({selectThumbnails,setSelectThumbnails,handleDeleteClick,}
             </label>
           )}
         </h1>
-        <button
+        {
+          selectThumbnails.length>0 && <button
           className="text-red-500 font-medium"
           onClick={handleDeleteClick}
         >
           Delete files
         </button>
+        }
+        
       </article>
     </nav>
   );
